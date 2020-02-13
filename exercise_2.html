@@ -1,0 +1,112 @@
+<h1>Poop</h1>
+
+<script>
+  function sum(array) {
+    var index = 1;
+    var sum = array[0];
+    while(index < array.length){
+      sum += array[index];
+      index ++;
+    }
+    return sum
+  }
+
+  // console.log(sum([5,4,3]));
+
+  function smallestString(arrayOfStrings) {
+    var index = 1;
+    var smallest_string = arrayOfStrings[0];
+
+    while (index < arrayOfStrings.length){
+      if(arrayOfStrings[index].length < smallest_string.length) {
+        smallest_string = arrayOfStrings[index]
+      };
+      index ++;
+    }
+    return smallest_string;
+  }
+
+// console.log(smallestString(["but", "california", "pi", "pinecone", "flop"]))
+
+  function reverse(arrayOfNumbers) {
+    var index = arrayOfNumbers.length - 1;
+    var new_array = [];
+    while (index >= 0){
+      new_array.push(arrayOfNumbers[index]);
+      index--;
+    };
+    return new_array;
+  }
+
+  // console.log(reverse([1, 2, 3, 4, 5]));
+
+  // function findingA(arrayOfStrings) {
+  //   var count = 0
+  //   arrayOfStrings.forEach(functioin(string) {
+  //     if (string[0] === "a") {
+  //       count ++;
+  //     }
+  //   });
+  //   return count;
+  // }
+
+  // console.log(findingA(["apple", "candy", "alabama"]));
+
+  function singleString(arrayOfStrings) {
+    var finalString = "";
+    arrayOfStrings.forEach(function(string){
+      if(string === arrayOfStrings[arrayOfStrings.length - 1]){
+        finalString += string;
+      } else {
+       finalString += string + ", ";
+      }
+    });
+    return finalString
+  }
+
+  // console.log(singleString(["the", "butt", "stunk"]));
+
+  function product(arrayOfNumbers) {
+    var index = 1;
+    var product = arrayOfNumbers[0];
+    while(index < arrayOfNumbers.length){
+      product *= arrayOfNumbers[index];
+      index ++;
+    }
+    return product
+  }
+
+  // console.log(product([5,4,3]));
+
+  function smallestTwo(arrayOfNumbers) {
+    var smallestNumber = arrayOfNumbers[0];
+    var bigDogs = [];
+    var lilDogs = [];
+    var index = 1;
+    
+    while (index < arrayOfNumbers.length) {
+      if(arrayOfNumbers[index] < smallestNumber) {
+        smallestNumber = arrayOfNumbers[index]
+      } else {
+        bigDogs.push(arrayOfNumbers[index])
+      }
+      index++;
+    }
+
+    var secondSmallestNumber = bigDogs[0];
+    var index = 1;
+
+    while (index < bigDogs.length) {
+      if(bigDogs[index] < secondSmallestNumber) {
+        secondSmallestNumber = bigDogs[index];
+      }
+      index++;
+    }
+    lilDogs.push(smallestNumber);
+    lilDogs.push(secondSmallestNumber);
+    return lilDogs
+  }
+
+  console.log(smallestTwo([4, 56, 10009, 32145, 57]));
+
+</script>
